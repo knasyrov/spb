@@ -10,11 +10,9 @@ class CommentsController < ApplicationController
 
     respond_to do |format|
       if @comment.save
-        logger.info 'dfdf'
         format.js { render :action => :show }
       else
-        logger.info 'dfddfsdafsdafsadfdsfds'
-        #format.json { render :json => @comment.errors, :status => :unprocessable_entity }
+        #format.js { }
       end
     end
   end
