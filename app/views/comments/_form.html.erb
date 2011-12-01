@@ -1,0 +1,5 @@
+<%= form_for Comment.new, :remote => true do |f| %>
+  <%= hidden_field_tag 'comment[article_id]', @article.id %>
+  <%= f.text_area :body, :style => 'width:600px; height: 40px;'  %> <br/>
+  <%= f.submit 'Комментировать' %>
+<% end %>

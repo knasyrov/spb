@@ -1,0 +1,25 @@
+<p id="notice"><%= notice %></p>
+
+<h1><%= @article.title %></h1>
+
+<div id='body'>
+
+<%= simple_format @article.body %>
+
+</div>
+
+<% if (current_user.class == Reader) %>
+<div id='comments'>
+    <div id="comments_list">
+      <%= render :partial => 'comments/list' %>
+    </div>
+    <div id="new_comment_form">
+      <%= render :partial => 'comments/form' %>
+    </div>
+</div>
+<% end %>
+
+<% if (@article.writer == current_user) %>
+<%= link_to 'Изменить', edit_article_path(@article) %> |
+<% end %>
+<%= link_to 'Назад', articles_path %>

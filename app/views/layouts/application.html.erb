@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Spb</title>
+  <%= stylesheet_link_tag    "application" %>
+  <%= javascript_include_tag "application" %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+<div class='header'>
+<% if user_signed_in? %>
+	Здравствуйте, <%= current_user.login %>
+	| <%= link_to "Выйти", destroy_user_session_path %>
+<% else %>
+	<%= link_to "Регистрация", new_user_registration_path %> |
+	<%= link_to "Вход", new_user_session_path %>
+<% end %>
+</div>
+<%= yield %>
+
+</body>
+</html>
