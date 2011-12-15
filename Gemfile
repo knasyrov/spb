@@ -7,6 +7,11 @@ gem 'rails', '3.1.0'
 
 gem 'sqlite3'
 gem 'devise'
+gem 'sinatra'
+gem 'thin'
+gem 'eventmachine'
+#gem 'async_sinatra'
+gem 'em-http-request'
 
 # Gems used only for assets and not required
 # in production environments by default.

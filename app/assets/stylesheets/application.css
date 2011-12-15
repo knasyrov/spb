@@ -5,3 +5,247 @@
  *= require_self
  *= require_tree . 
 */
+
+html, body {
+	margin:0;
+	padding:0;
+	width:100%;
+	height:100%;
+	
+	color: #555555;
+
+  	font-family: verdana, arial, helvetica, sans-serif;
+	font-size: 10pt;
+}
+
+
+ul, ol, li, h1, h2, h3, h4, h5, h6, pre, form, body, html, blockquote, fieldset, dl, dt, dd, caption {
+margin: 0px;
+padding: 0px;
+}
+
+/* ------------ UI ------------------ */
+
+input[type='text'],input[type='email'],input[type='password'],input[type='submit'], textarea, select, a.button
+{
+	border-radius: 3px;	/* 8px */
+	-webkit-border-radius: 3px;
+	-moz-border-radius: 3px;
+	-o-border-radius: 3px;
+
+	border: 1px solid #AAA;
+	padding: 3px 5px;
+	color: #888;
+
+	box-shadow: 0px 0px 5px #CCC;
+	-webkit-box-shadow: 0px 0px 5px #CCC;
+	-moz-box-shadow: 0px 0px 5px #CCC;
+	-o-box-shadow: 0px 0px 5px #CCC;
+
+	transition: all 300ms ease-in;
+	text-decoration: none;
+
+	background-color: #fff;
+}
+
+input[type='text']:hover,input[type='email']:hover,input[type='password']:hover, input[type='submit']:hover, textarea:hover, select:hover, a.button:hover
+{
+	color: #666;
+	border-color: #66cccc;
+
+	box-shadow: 0px 0px 6px #99ccff;
+	-webkit-box-shadow: 0px 0px 6px #99ccff;
+	-moz-box-shadow: 0px 0px 6px #99ccff;
+	-o-box-shadow: 0px 0px 6px #99ccff;
+}
+
+input[type='text']:focus, input[type='email']:focus, input[type='password']:focus, input[type='submit']:focus, textarea:focus, select: focus, a.button:focus
+{
+	color: #333;
+	border-color: #6699cc;
+
+	box-shadow: 0px 0px 6px #66ccff;
+	-webkit-box-shadow:  0px 0px 6px #66ccff;
+	-moz-box-shadow: 0px 0px 6px #66ccff;
+	-o-box-shadow: 0px 0px 6px #66ccff;
+}
+
+input, textarea, select, a.button {
+	font-family: verdana, tahoma, sans-serif;
+	font-size: 10pt;
+}
+
+input[type='submit'], a.button {
+	padding: 3px 5px;
+}
+
+label {
+	font-family: verdana, tahoma, sans-serif;
+	font-size: 11pt;
+}
+
+a {
+	color: #0A499B;
+}
+
+
+
+
+table { 
+	border-collapse: collapse; /* Убираем двойные линии между ячейками */
+	border: 0px;
+} 
+table tr td { 
+	padding: 5px 15px;
+    border: 1px solid #ccc; 
+    text-align: center; 
+} 
+
+table tr td:first-child, table tr th:first-child
+{
+	border-left: none;
+}
+
+table tr td:last-child
+{
+	border-right: none;
+}
+
+table tr:first-child td, table tr:first-child
+{
+	border-top: none;
+}
+
+table tr:last-child td, table tr:last-child
+{
+	border-bottom: none;
+}
+
+#pagination li {
+	border:0; margin:0; padding:0;
+	font-size:11px;
+	list-style:none;
+}
+
+#pagination a {
+	border:solid 1px #DDDDDD;
+	margin-right:2px;
+	color: #0A499B;
+}
+
+#pagination .previous-off, #pagination .next-off {
+	color:#666666;
+	display:block;
+	float:left;
+	/* font-weight:bold; */
+	padding:3px 4px;
+}
+
+#pagination .next a, #pagination .previous a {
+	/* font-weight:bold; */
+	border:solid 1px #FFFFFF;
+}
+
+#pagination .active {
+	/* color:#ff0084; */
+	font-weight:bold;
+	display:block;
+	float:left;
+	padding:4px 6px;
+}
+
+#pagination a:link, #pagination a:visited {
+	color: #0A499B;
+	display:block;
+	float:left;
+	padding:3px 6px;
+	text-decoration:none;
+}
+
+#pagination a:hover {
+	border:solid 1px #666666;
+}
+
+ul,ol {list-style: none;}
+
+h1 {
+	color: #0A499B;
+	font-size:14pt;
+	font-weight: normal;
+}   
+
+h2 {
+	color: #0A499B;
+	font-size: 12pt;
+	font-weight: normal;
+}   
+h3 {
+	color: #0A499B;
+	font-size:10pt;
+	font-weight: normal;
+}
+
+div.comment {
+	border: 1px solid #CCC;
+	border-radius: 5px; 
+	-o-border-radius: 5px; 
+	-moz-border-radius: 5px; 
+	-webkit-border-radius: 5px;
+	padding: 5px;
+	margin: 5px;
+}
+
+div.header {
+	margin: 0 20px 0 20px;
+	padding-top:10px;
+}
+
+div.content {
+	padding: 10px;
+}
+
+div#created_at {
+	margin-top: 5px;
+	color: #000000;
+	font-size: 8pt;
+}
+
+
+div
+{
+	vertical-align: baseline;
+}
+
+
+
+div.clear
+{
+	clear: both;
+	margin: 0;
+	padding: 0;
+	border: 0;
+}
+
+form 
+{
+	margin-top: 15px;
+	padding: 10px;
+	float: left;
+	border: 1px solid #CCC;
+	border-radius: 5px; 
+	-o-border-radius: 5px; 
+	-moz-border-radius: 5px; 
+	-webkit-border-radius: 5px;	
+}
+
+div.field label
+{
+	display: inline-block;
+	width: 120px;
+}
+
+div.actions
+{
+	margin-top: 15px;
+	float: right;
+}

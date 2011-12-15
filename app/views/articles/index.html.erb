@@ -3,19 +3,22 @@
 <%= will_paginate @article %>
 
 <table>
+<thead>
   <tr>
     <th>Название</th>
     <th></th>
     <th></th>
     <th></th>
   </tr>
-
+</thead>
 <% @articles.each do |article| %>
   <tr>
     <td><%= article.title %></td>
     <td><%= link_to 'Смотреть', article %></td>
-    <td><%= (link_to 'Изменить', edit_article_path(article)) if (article.writer == current_user) %></td>
-    <td><%= (link_to 'Удалить', article, confirm: 'Вы уверены?', method: :delete) if (article.writer == current_user) %></td>
+  <% if (article.writer == current_user) %>
+    <td><%= link_to 'Изменить', edit_article_path(article)  %></td>
+    <td><%= link_to 'Удалить', article, confirm: 'Вы уверены?', method: :delete %></td>
+  <% end %>
   </tr>
 <% end %>
 </table>

@@ -1,3 +1,9 @@
+<% if (@article.writer == current_user) %>
+<%= link_to 'Изменить', edit_article_path(@article) %> |
+<% end %>
+<%= link_to 'Назад', articles_path %>
+<div class='clear'></div>
+
 <p id="notice"><%= notice %></p>
 
 <h1><%= @article.title %></h1>
@@ -19,7 +25,4 @@
 </div>
 <% end %>
 
-<% if (@article.writer == current_user) %>
-<%= link_to 'Изменить', edit_article_path(@article) %> |
-<% end %>
-<%= link_to 'Назад', articles_path %>
+<div class='clear'></div>

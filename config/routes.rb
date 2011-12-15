@@ -10,4 +10,6 @@ Spb::Application.routes.draw do
   #devise_for :readers, :path => '/', :path_names => { :sign_in => "login", :sign_out => "logout", :sign_up => "register"}, :controllers => { :sessions => "devise/sessions" }
 
   root :to => 'articles#index'
+
+  #mount Compressor.new, :at => "/file"
 end
